@@ -26,7 +26,7 @@ function install_docker (){
 install_docker
 
 function prometheus(){
-    docker run -d -p 9090:9090 --privileged -v /vagrant/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+    docker run --name prometheus -d -p 9090:9090 --privileged -v /vagrant/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 }
 
 prometheus
